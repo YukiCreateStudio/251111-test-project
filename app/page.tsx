@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import ButtonLink from "./components/ButtonLink";
 import NewsList from "./components/NewsList";
 import { News } from "@/app/_libs/microcms";
+import Header from "./components/Header";
 
 const data: { contents: News[] } = {
   contents: [
@@ -35,6 +36,7 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <section className={styles.top}>
         <div>
           <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
