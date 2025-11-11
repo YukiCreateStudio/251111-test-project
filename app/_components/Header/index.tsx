@@ -1,12 +1,11 @@
-
 import Image from "next/image";
 import styles from "./index.module.css";
+import Link from "next/link";
 
-
-export default function Header(){
-  return(
+export default function Header() {
+  return (
     <header className={styles.header}>
-      <a href="/" className={styles.logoLink}>
+      <Link href="/" className={styles.logoLink}>
         <Image
           className={styles.logo}
           src="/logo.svg"
@@ -15,7 +14,20 @@ export default function Header(){
           height={133}
           priority
         />
-      </a>
+      </Link>
+      <nav className={styles.nav}>
+        <ul className={styles.items}>
+          <li className={styles.item}>
+            <Link href="/news">ニュース</Link>
+          </li>
+          <li className={styles.item}>
+            <Link href="/members">メンバー</Link>
+          </li>
+          <li className={styles.item}>
+            <Link href="/contact">お問い合わせ</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
-  )
+  );
 }

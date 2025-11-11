@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import ButtonLink from "./_components/ButtonLink";
 import NewsList from "./_components/NewsList";
 import { News } from "@/app/_libs/microcms";
-import Header from "./_components/Header";
+import Hero from "./_components/Hero";
 
 const data: { contents: News[] } = {
   contents: [
@@ -36,22 +36,12 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      <section className={styles.top}>
-        <div>
-          <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
-          <p className={styles.description}>
-            私たちは市場をリードしているグローバルテックカンパニーです。
-          </p>
-        </div>
-        <Image
-          className={styles.bgimg}
-          src="/img-mv.jpg"
-          alt=""
-          width={4000}
-          height={1200}
-        />
-      </section>
+      <Hero
+        title={"テクノロジーの力で世界を変える"}
+        description={
+          "私たちは市場をリードしているグローバルテックカンパニーです。"
+        }
+      />
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
         <NewsList news={sliceData} />
