@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import ButtonLink from "./components/ButtonLink";
-import NewsList from "./components/NewsList";
+import ButtonLink from "./_components/ButtonLink";
+import NewsList from "./_components/NewsList";
 import { News } from "@/app/_libs/microcms";
-import Header from "./components/Header";
+import Header from "./_components/Header";
 
 const data: { contents: News[] } = {
   contents: [
