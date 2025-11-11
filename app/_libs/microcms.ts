@@ -1,3 +1,5 @@
+
+
 export type Category = {
   name: string;
 };
@@ -17,3 +19,8 @@ export type MembersType = {
   position:string;
   profile:string;
 }
+
+// const client = createClient({
+//   serviceDomain:process.env.MICROCMS_SERVICE_DOMAIN,
+//   apikey:process.env.MICROCMS_API_KEY,
+// });
